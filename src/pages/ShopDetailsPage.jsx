@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { shops } from '../data/shops';
 import { MapPin, Phone, Mail, Globe, Clock, ChevronLeft, Star, ShoppingBag } from 'lucide-react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -17,10 +19,53 @@ L.Icon.Default.mergeOptions({
 const ShopDetailsPage = () => {
   const { id } = useParams();
   const shop = shops.find(s => s.id === Number(id));
-  
+
+  // Form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  // Handle form input changes
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [id]: value
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Show success toast
+    toast.success('Message submitted successfully!', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
+
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
+
+    // Reload page after a short delay
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000);
+  };
+
   // Jalandhar coordinates
   const jalandharPosition = [31.3260, 75.5762];
-  
+
   if (!shop) {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
@@ -33,14 +78,15 @@ const ShopDetailsPage = () => {
       </div>
     );
   }
-  
+
   return (
     <div>
       {/* Hero Section */}
+      <ToastContainer />
       <div className="relative h-80 bg-gray-900">
-        <img 
-          src={shop.imageUrl} 
-          alt={shop.name} 
+        <img
+          src={shop.imageUrl}
+          alt={shop.name}
           className="w-full h-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -70,7 +116,7 @@ const ShopDetailsPage = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -79,7 +125,7 @@ const ShopDetailsPage = () => {
             <div className="bg-white rounded-lg shadow-md p-6 mb-8">
               <h2 className="text-2xl font-bold mb-4">About {shop.name}</h2>
               <p className="text-gray-700 mb-6">{shop.longDescription}</p>
-              
+
               <h3 className="text-xl font-semibold mb-3">Features</h3>
               <div className="flex flex-wrap gap-2 mb-6">
                 {shop.features.map((feature, index) => (
@@ -88,7 +134,7 @@ const ShopDetailsPage = () => {
                   </span>
                 ))}
               </div>
-              
+
               {/* <h3 className="text-xl font-semibold mb-3">Gallery</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {shop.galleryImages.map((image, index) => (
@@ -101,19 +147,19 @@ const ShopDetailsPage = () => {
                 ))}
               </div> */}
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-md p-6">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold">Featured Products</h2>
                 <button className="text-indigo-600 hover:text-indigo-800 font-medium">View All</button>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {shop.products.map(product => (
                   <div key={product.id} className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                    <img 
-                      src={product.imageUrl} 
-                      alt={product.name} 
+                    <img
+                      src={product.imageUrl}
+                      alt={product.name}
                       className="w-full h-48 object-cover"
                     />
                     <div className="p-4">
@@ -131,7 +177,7 @@ const ShopDetailsPage = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Right Column - Contact & Details */}
           <div>
             <div className="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -174,13 +220,13 @@ const ShopDetailsPage = () => {
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-md p-6 mb-6">
               <h3 className="text-xl font-semibold mb-4">Location</h3>
               <div className="h-64 rounded-lg overflow-hidden">
-                <MapContainer 
-                  center={jalandharPosition} 
-                  zoom={13} 
+                <MapContainer
+                  center={jalandharPosition}
+                  zoom={13}
                   style={{ height: '100%', width: '100%' }}
                 >
                   <TileLayer
@@ -198,35 +244,47 @@ const ShopDetailsPage = () => {
                 Get Directions
               </button>
             </div>
-            
+
             <div className="bg-indigo-50 rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-3">Send a Message</h3>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
+                  <input
+                    type="text"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required
                   />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required
                   />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea 
-                    id="message" 
+                  <textarea
+                    id="message"
                     rows={4}
+                    value={formData.message}
+                    onChange={handleInputChange}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required
                   ></textarea>
                 </div>
-                <button type="submit" className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition-colors">
+                <button
+                  type="submit"
+                  className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition-colors"
+                >
                   Send Message
                 </button>
               </form>
