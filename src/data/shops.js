@@ -164,5 +164,140 @@ export const shops = [
         imageUrl: "https://media.istockphoto.com/id/1487454770/photo/plastic-sport-nutrition-container-template.webp?a=1&b=1&s=612x612&w=0&k=20&c=BXIMIEhWNJXydLadNtoK471W41MUOUjU89ABoxqUk_s="
       },
     ]
+  },
+  {
+    id: 5,
+    name: "Syndicate Sport Private Limited",
+    description: "Any kind of stuff related to Sports.",
+    longDescription: "Syndicate Sport Private Limited is your ultimate destination for high-quality gym equipment and fitness accessories. We take pride in offering a carefully curated selection from top brands, ensuring durability, performance, and innovation. From state-of-the-art treadmills and strength machines to free weights and resistance bands, our collection caters to all fitness levels. Our commitment to quality extends beyond products—we regularly host fitness workshops where experts guide you on equipment usage, workout techniques, and achieving your fitness goals.",
+    category: "Fitness and Sports",
+    imageUrl: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ],
+    location: "Jalandhar, Punjab",
+    address: "Basti Road, Near Football Chownk, Jalandhar, Punjab",
+    hours: "Mon-Sat: 11AM-8PM, Sun: 12PM-6PM",
+    phone: "6202260945",
+    email: "hello@syndicatesport.com",
+    website: "www.syndicatesport.com",
+    rating: 4.7,
+    reviews: 156,
+    features: ["Personal Styling", "Fitness", "Ethical Sourcing", "Member Events"],
+    products: [
+      {
+        id: 501,
+        name: "Gym bars and stands",
+        price: 128,
+        description: "Gym equipments and all kind of gym stuffs.",
+        imageUrl: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3BvcnRzfGVufDB8fDB8fHww"
+      },
+      {
+        id: 502,
+        name: "Whey Protein",
+        price: 185,
+        description: "Makes you healthy and improves muscle growth.",
+        imageUrl: "https://media.istockphoto.com/id/1487454770/photo/plastic-sport-nutrition-container-template.webp?a=1&b=1&s=612x612&w=0&k=20&c=BXIMIEhWNJXydLadNtoK471W41MUOUjU89ABoxqUk_s="
+      },
+      {
+        id: 503,
+        name: "Cricket Bats",
+        price: 185,
+        description: "Best quality cricket bats are made here",
+        imageUrl: "https://images.unsplash.com/photo-1593341646647-75b32930e4a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNyaWNrZXQlMjBiYXR8ZW58MHx8MHx8fDA%3D"
+      },
+    ]
+  },
+  {
+    id: 6,
+    name: "Attack Sporting Goods",
+    description: "Any kind of stuff related to Sports.",
+    longDescription: "Attack Sporting Goods is your ultimate destination for high-quality gym equipment and fitness accessories. We take pride in offering a carefully curated selection from top brands, ensuring durability, performance, and innovation. From state-of-the-art treadmills and strength machines to free weights and resistance bands, our collection caters to all fitness levels. Our commitment to quality extends beyond products—we regularly host fitness workshops where experts guide you on equipment usage, workout techniques, and achieving your fitness goals.",
+    category: "Fitness and Sports",
+    imageUrl: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ],
+    location: "Jalandhar, Punjab",
+    address: "WX-25, Basti Nau, Near Football Chownk, Jalandhar, Punjab",
+    hours: "Mon-Sat: 11AM-8PM, Sun: 12PM-6PM",
+    phone: "6202260945",
+    email: "hello@attacksports.com",
+    website: "www.attacksports.com",
+    rating: 4.7,
+    reviews: 156,
+    features: ["Personal Styling", "Fitness", "Ethical Sourcing", "Member Events"],
+    products: [
+      {
+        id: 601,
+        name: "Gym bars and stands",
+        price: 128,
+        description: "Gym equipments and all kind of gym stuffs.",
+        imageUrl: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3BvcnRzfGVufDB8fDB8fHww"
+      },
+      {
+        id: 602,
+        name: "Whey Protein",
+        price: 185,
+        description: "Makes you healthy and improves muscle growth.",
+        imageUrl: "https://media.istockphoto.com/id/1487454770/photo/plastic-sport-nutrition-container-template.webp?a=1&b=1&s=612x612&w=0&k=20&c=BXIMIEhWNJXydLadNtoK471W41MUOUjU89ABoxqUk_s="
+      },
+      {
+        id: 603,
+        name: "Cricket Bats",
+        price: 185,
+        description: "Best quality cricket bats are made here",
+        imageUrl: "https://images.unsplash.com/photo-1593341646647-75b32930e4a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNyaWNrZXQlMjBiYXR8ZW58MHx8MHx8fDA%3D"
+      },
+    ]
+  },
+  {
+    id: 7,
+    name: "Nand Sports and Gyms",
+    description: "Any kind of stuff related to Sports.",
+    longDescription: "Nand Sports and Gyms is your ultimate destination for high-quality gym equipment and fitness accessories. We take pride in offering a carefully curated selection from top brands, ensuring durability, performance, and innovation. From state-of-the-art treadmills and strength machines to free weights and resistance bands, our collection caters to all fitness levels. Our commitment to quality extends beyond products—we regularly host fitness workshops where experts guide you on equipment usage, workout techniques, and achieving your fitness goals.",
+    category: "Fitness and Sports",
+    imageUrl: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ],
+    location: "Jalandhar, Punjab",
+    address: "Plot No.- 882883, Basti Dani Shmandar, BhaiyMandi Chownk, Jalandhar, Punjab",
+    hours: "Mon-Sat: 11AM-8PM, Sun: 12PM-6PM",
+    phone: "6202260945",
+    email: "hello@nandsport.com",
+    website: "www.nandsport.com",
+    rating: 4.7,
+    reviews: 156,
+    features: ["Personal Styling", "Fitness", "Ethical Sourcing", "Member Events"],
+    products: [
+      {
+        id: 701,
+        name: "Gym bars and stands",
+        price: 128,
+        description: "Gym equipments and all kind of gym stuffs.",
+        imageUrl: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3BvcnRzfGVufDB8fDB8fHww"
+      },
+      {
+        id: 702,
+        name: "Whey Protein",
+        price: 185,
+        description: "Makes you healthy and improves muscle growth.",
+        imageUrl: "https://media.istockphoto.com/id/1487454770/photo/plastic-sport-nutrition-container-template.webp?a=1&b=1&s=612x612&w=0&k=20&c=BXIMIEhWNJXydLadNtoK471W41MUOUjU89ABoxqUk_s="
+      },
+      {
+        id: 703,
+        name: "Cricket Bats",
+        price: 185,
+        description: "Best quality cricket bats are made here",
+        imageUrl: "https://images.unsplash.com/photo-1593341646647-75b32930e4a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNyaWNrZXQlMjBiYXR8ZW58MHx8MHx8fDA%3D"
+      },
+    ]
   }
 ];
