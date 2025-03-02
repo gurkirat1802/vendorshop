@@ -89,7 +89,7 @@ const ShopDetailsPage = () => {
                 ))}
               </div>
               
-              <h3 className="text-xl font-semibold mb-3">Gallery</h3>
+              {/* <h3 className="text-xl font-semibold mb-3">Gallery</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {shop.galleryImages.map((image, index) => (
                   <img 
@@ -99,7 +99,7 @@ const ShopDetailsPage = () => {
                     className="w-full h-48 object-cover rounded-lg"
                   />
                 ))}
-              </div>
+              </div> */}
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
