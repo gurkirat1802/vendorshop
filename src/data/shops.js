@@ -129,7 +129,7 @@ export const shops = [
   },
   {
     id: 4,
-    name: "Apton Fitness",
+    name: "Apton Fitness, Jalandhar, Punjab",
     description: "Any kind of stuff related to fitness.",
     longDescription: "Apton Fitness Shop is your ultimate destination for high-quality gym equipment and fitness accessories. We take pride in offering a carefully curated selection from top brands, ensuring durability, performance, and innovation. From state-of-the-art treadmills and strength machines to free weights and resistance bands, our collection caters to all fitness levels. Our commitment to quality extends beyond products—we regularly host fitness workshops where experts guide you on equipment usage, workout techniques, and achieving your fitness goals.",
     category: "Fitness",
